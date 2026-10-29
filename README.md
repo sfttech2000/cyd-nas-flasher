@@ -6,8 +6,7 @@ phones with Chrome and an OTG cable (WebUSB, small CH340 driver).
 
 firmware/boot.bin goes to 0x0 and firmware/app.bin to 0xe000, so the settings (NVS 0x9000-0xDFFF:
 WiFi, web login, touch calibration) are kept; "erase" wipes the whole chip first. Files on the
-microSD card are never touched by the installer. firmware/full.bin is the one-file image for other
-tools (0x0).
+microSD card are never touched by the installer. Installs go through this page only (no one-file image), so each one is counted.
 
 Uses esptool-js 0.6.1 (Apache-2.0), vendored in mobile/esptool-js/ with its licence.
 The firmware's screen font is Sarabun (SIL OFL 1.1). Made by tee & claude.
